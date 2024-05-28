@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
-export const useTodoStore = defineStore('todo', () => {
+export const useCountStore = defineStore('count', () => {
     const count = ref(5)
     const name = ref('Eduardo')
     const doubleCount = computed(() => count.value * 2)

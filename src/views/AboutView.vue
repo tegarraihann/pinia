@@ -1,8 +1,8 @@
 <template>
   <h1>Menggunakan Store</h1>
-  <p>Akses count: {{ todoStore.count }}</p>
-  <p>Akses doubleCount : {{ todoStore.doubleCount }}</p>
-  <button @click="todoStore.increment">+</button><br /><br />
+  <p>Akses count: {{ countStore.count }}</p>
+  <p>Akses doubleCount : {{ countStore.doubleCount }}</p>
+  <button @click="countStore.increment">+</button><br /><br />
 
   <h1>Tanpa Store</h1>
   <p>Akses count tanpa store: {{ count }}</p>
@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import { useTodoStore } from '../stores/todoStore'
+import { useCountStore } from '../stores/countStore'
 import { ref } from 'vue'
  export default {
   setup() {
       const count = ref(0)
-      const todoStore = useTodoStore()
+      const countStore = useCountStore()
 
-      return { todoStore, count }
+      return { countStore, count }
   },
   methods: {
     increment() {
